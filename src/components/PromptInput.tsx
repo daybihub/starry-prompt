@@ -22,13 +22,13 @@ export const PromptInput = ({ value, onChange, onSubmit, onEnhance }: PromptInpu
         <Button
           onClick={onSubmit}
           size="icon"
-          className="rounded-full bg-gradient-to-r from-purple-500/80 to-blue-500/80 hover:from-purple-500 hover:to-blue-500 transition-all duration-300"
+          className="rounded-full w-14 h-14 bg-gradient-to-r from-purple-500/80 to-blue-500/80 hover:from-purple-500 hover:to-blue-500 transition-all duration-300"
         >
-          <ArrowUp className="h-4 w-4" />
+          <ArrowUp className="h-6 w-6" />
         </Button>
         <Button
           onClick={onEnhance}
-          className="enhance-button"
+          className="rounded-full bg-transparent border border-white/20 hover:bg-white/5 transition-all duration-300"
         >
           Enhance
         </Button>

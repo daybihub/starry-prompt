@@ -3,6 +3,7 @@ import { Logo } from '@/components/Logo';
 import { PromptInput } from '@/components/PromptInput';
 import { StockPrompts } from '@/components/StockPrompts';
 import { useToast } from "@/components/ui/use-toast";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const [prompt, setPrompt] = useState('');
@@ -60,15 +61,19 @@ const Index = () => {
       </div>
 
       {/* Green gradient */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-green-500/20 to-transparent pointer-events-none" />
+      <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto space-y-8 relative">
-        <header className="flex flex-col items-start">
+        <header className="flex justify-between items-center">
           <Logo />
-          <h1 className="text-2xl md:text-3xl font-light text-white/60 text-center w-full mt-4">
-            Idea to Web, <span className="text-white">fast...</span>
-          </h1>
+          <Button variant="outline" className="border-white/10 hover:bg-white/5">
+            Login
+          </Button>
         </header>
+
+        <h1 className="text-5xl md:text-7xl font-light text-white/60 text-center mt-12 mb-16">
+          Idea to Web, <span className="text-white">fast...</span>
+        </h1>
 
         <main className="glass-panel rounded-xl p-6">
           <PromptInput

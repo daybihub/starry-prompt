@@ -14,9 +14,8 @@ interface StockPromptsProps {
 
 export const StockPrompts = ({ onSelect }: StockPromptsProps) => {
   return (
-    <div className="mt-6">
-      <h3 className="text-sm font-medium text-white/60 mb-3">Stock Prompts</h3>
-      <div className="flex flex-wrap gap-2">
+    <div className="mt-6 flex justify-center">
+      <div className="flex flex-wrap gap-2 justify-center">
         {stockPrompts.map((prompt, index) => (
           <button
             key={index}
