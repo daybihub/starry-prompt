@@ -54,3 +54,14 @@
 .prompt-item {
   @apply hover:bg-white/5 transition-colors duration-200 cursor-pointer rounded-lg p-3;
 }
+
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: rgba(255, 0, 234, 0.3);
+    box-shadow: 0 0 20px -5px rgba(255, 0, 234, 0.5);
+  }
+  50% {
+    border-color: rgba(255, 0, 234, 0.6);
+    box-shadow: 0 0 30px -5px rgba(255, 0, 234, 0.8);
+  }
+}

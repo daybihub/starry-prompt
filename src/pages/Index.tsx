@@ -4,6 +4,7 @@ import { PromptInput } from '@/components/PromptInput';
 import { StockPrompts } from '@/components/StockPrompts';
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
+import { Facebook, Linkedin } from 'lucide-react';
 
 const Index = () => {
   const [prompt, setPrompt] = useState('');
@@ -61,21 +62,24 @@ const Index = () => {
       </div>
 
       {/* Green gradient */}
-      <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-gradient-to-br from-green-500/20 via-green-500/10 to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-green-500/30 via-green-500/20 to-transparent blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto space-y-8 relative">
         <header className="flex justify-between items-center">
           <Logo />
-          <Button variant="outline" className="border-white/10 hover:bg-white/5">
+          <Button variant="outline" className="rounded-full bg-white hover:bg-white/90 text-black border-0">
             Login
           </Button>
         </header>
 
-        <h1 className="text-5xl md:text-7xl font-light text-white/60 text-center mt-12 mb-16">
-          Idea to Web, <span className="text-white">fast...</span>
+        <h1 className="text-5xl md:text-7xl font-light text-center mt-12 mb-16">
+          <span className="font-mono text-white/60">Idea</span>{" "}
+          <span className="font-serif text-white/60">to</span>{" "}
+          <span className="font-sans text-white/60">Web</span>,{" "}
+          <span className="font-bold text-white">FAST...</span>
         </h1>
 
-        <main className="glass-panel rounded-xl p-6">
+        <main className="backdrop-blur-sm bg-white/5 rounded-xl p-6 border border-white/10">
           <PromptInput
             value={prompt}
             onChange={setPrompt}
@@ -84,6 +88,16 @@ const Index = () => {
           />
           <StockPrompts onSelect={setPrompt} />
         </main>
+
+        {/* Social Media Buttons */}
+        <div className="fixed bottom-8 right-8 flex gap-4">
+          <Button size="icon" variant="outline" className="rounded-full w-12 h-12 bg-white/5 hover:bg-white/10 border border-white/10">
+            <Facebook className="w-5 h-5" />
+          </Button>
+          <Button size="icon" variant="outline" className="rounded-full w-12 h-12 bg-white/5 hover:bg-white/10 border border-white/10">
+            <Linkedin className="w-5 h-5" />
+          </Button>
+        </div>
       </div>
     </div>
   );
