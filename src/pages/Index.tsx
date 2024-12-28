@@ -17,7 +17,6 @@ const Index = () => {
       });
       return;
     }
-    // Handle submission
     toast({
       title: "Success",
       description: "Prompt submitted successfully!",
@@ -33,7 +32,6 @@ const Index = () => {
       });
       return;
     }
-    // Handle enhancement
     toast({
       title: "Enhancing",
       description: "Making your prompt even better...",
@@ -41,12 +39,34 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen p-4 md:p-8">
-      <div className="max-w-4xl mx-auto space-y-8">
-        <header className="space-y-2">
+    <div className="min-h-screen p-4 md:p-8 relative overflow-hidden bg-black">
+      {/* Background squares */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute opacity-10 border border-white/20"
+              style={{
+                top: `${Math.random() * 100}%`,
+                left: `${Math.random() * 100}%`,
+                width: `${Math.random() * 200 + 50}px`,
+                height: `${Math.random() * 200 + 50}px`,
+                transform: `rotate(${Math.random() * 360}deg)`,
+              }}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Green gradient */}
+      <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-green-500/20 to-transparent pointer-events-none" />
+
+      <div className="max-w-4xl mx-auto space-y-8 relative">
+        <header className="flex flex-col items-start">
           <Logo />
-          <h1 className="text-2xl md:text-3xl font-light text-muted-foreground">
-            Idea to Web, <span className="text-foreground">fast...</span>
+          <h1 className="text-2xl md:text-3xl font-light text-white/60 text-center w-full mt-4">
+            Idea to Web, <span className="text-white">fast...</span>
           </h1>
         </header>
 

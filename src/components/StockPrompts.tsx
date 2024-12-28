@@ -1,11 +1,11 @@
 import React from 'react';
 
 const stockPrompts = [
-  "Create a modern landing page for a SaaS product",
-  "Design a minimalist portfolio website",
-  "Build a dashboard with analytics charts",
-  "Make an e-commerce product page",
-  "Design a blog homepage with featured posts"
+  "Landing page",
+  "Portfolio",
+  "Dashboard",
+  "E-commerce",
+  "Blog"
 ];
 
 interface StockPromptsProps {
@@ -15,16 +15,16 @@ interface StockPromptsProps {
 export const StockPrompts = ({ onSelect }: StockPromptsProps) => {
   return (
     <div className="mt-6">
-      <h3 className="text-sm font-medium text-muted-foreground mb-3">Stock Prompts</h3>
-      <div className="grid gap-2">
+      <h3 className="text-sm font-medium text-white/60 mb-3">Stock Prompts</h3>
+      <div className="flex flex-wrap gap-2">
         {stockPrompts.map((prompt, index) => (
-          <div
+          <button
             key={index}
             onClick={() => onSelect(prompt)}
-            className="prompt-item"
+            className="px-3 py-1.5 text-sm rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-colors duration-200"
           >
             {prompt}
-          </div>
+          </button>
         ))}
       </div>
     </div>
