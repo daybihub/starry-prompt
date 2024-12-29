@@ -62,7 +62,7 @@ const Index = () => {
       </div>
 
       {/* Purple gradient */}
-      <div className="absolute top-0 left-0 w-[1000px] h-[1000px] rounded-full bg-gradient-to-br from-purple-500/30 via-purple-500/20 to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute -top-[300px] -left-[300px] w-[1000px] h-[1000px] rounded-full bg-gradient-to-br from-purple-500/30 via-purple-500/20 to-transparent blur-3xl pointer-events-none" />
 
       <div className="max-w-4xl mx-auto relative">
         <header className="flex justify-between items-center">

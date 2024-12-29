@@ -15,14 +15,14 @@ export const PromptInput = ({ value, onChange, onSubmit, onEnhance }: PromptInpu
       <textarea
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full h-40 bg-secondary/30 backdrop-blur-sm rounded-xl p-4 resize-none border border-white/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all focus:border-[#ff00ea] focus:shadow-[0_0_30px_-5px_#ff00ea] duration-300"
+        className="w-full h-40 bg-black/90 backdrop-blur-sm rounded-xl p-4 pr-24 resize-none border border-white/10 focus:outline-none focus:ring-2 focus:ring-purple-500/50 transition-all focus:border-[#ff00ea] focus:shadow-[0_0_30px_-5px_#ff00ea] duration-300"
         placeholder="Enter your prompt here..."
       />
       <div className="absolute bottom-4 right-4 flex flex-col items-center gap-2">
         <Button
           onClick={onSubmit}
           size="icon"
-          className="rounded-full w-16 h-16 relative overflow-hidden transition-all duration-300"
+          className="rounded-lg w-16 h-16 relative overflow-hidden transition-all duration-300"
           style={{
             background: 'linear-gradient(-45deg, #9333ea, #3b82f6, #38bdf8, #4ade80, #22c55e)',
             backgroundSize: '400% 400%',
