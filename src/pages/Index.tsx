@@ -72,7 +72,7 @@ const Index = () => {
           </Button>
         </header>
 
-        <h1 className="text-[6rem] font-light text-center mt-12 mb-16">
+        <h1 className="text-[6rem] font-light text-center mt-12 mb-8">
           <span className="font-mono text-white/60">Idea</span>{" "}
           <span className="font-serif text-white/60">to</span>{" "}
           <span className="font-sans text-white/60">Web</span>,{" "}
