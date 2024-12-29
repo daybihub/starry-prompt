@@ -22,14 +22,14 @@ export const PromptInput = ({ value, onChange, onSubmit, onEnhance }: PromptInpu
         <Button
           onClick={onSubmit}
           size="icon"
-          className="rounded-full w-14 h-14 relative overflow-hidden transition-all duration-300"
+          className="rounded-full w-16 h-16 relative overflow-hidden transition-all duration-300"
           style={{
             background: 'linear-gradient(-45deg, #9333ea, #3b82f6, #38bdf8, #4ade80, #22c55e)',
             backgroundSize: '400% 400%',
             animation: 'gradient 2s ease infinite',
           }}
         >
-          <ArrowUp className="h-6 w-6 relative z-10" />
+          <ArrowUp className="h-8 w-8 relative z-10" />
         </Button>
         <Button
           onClick={onEnhance}

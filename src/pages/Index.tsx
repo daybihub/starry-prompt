@@ -62,9 +62,9 @@ const Index = () => {
       </div>
 
       {/* Purple gradient */}
-      <div className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full bg-gradient-to-br from-purple-500/30 via-purple-500/20 to-transparent blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-0 w-[1000px] h-[1000px] rounded-full bg-gradient-to-br from-purple-500/30 via-purple-500/20 to-transparent blur-3xl pointer-events-none" />
 
-      <div className="max-w-4xl mx-auto space-y-8 relative">
+      <div className="max-w-4xl mx-auto relative">
         <header className="flex justify-between items-center">
           <Logo />
           <Button variant="outline" className="rounded-full bg-white hover:bg-white/90 text-black border-0">
@@ -72,7 +72,7 @@ const Index = () => {
           </Button>
         </header>
 
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-light text-center mt-12 mb-16">
+        <h1 className="text-[6rem] font-light text-center mt-12 mb-16">
           <span className="font-mono text-white/60">Idea</span>{" "}
           <span className="font-serif text-white/60">to</span>{" "}
           <span className="font-sans text-white/60">Web</span>,{" "}
@@ -86,8 +86,10 @@ const Index = () => {
             onSubmit={handleSubmit}
             onEnhance={handleEnhance}
           />
-          <StockPrompts onSelect={setPrompt} />
         </main>
+
+        {/* Stock Prompts outside the main container */}
+        <StockPrompts onSelect={setPrompt} />
 
         {/* Social Media Buttons */}
         <div className="fixed bottom-8 right-8 flex flex-col gap-4">
