@@ -39,7 +39,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-black text-foreground;
+    @apply bg-[#030711] text-foreground;
   }
 }
 
@@ -72,6 +72,15 @@
 
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes rotatingBorder {
+  0% {
+    border-image: linear-gradient(0deg, #09cbca 50%, #ff3e81 50%) 1;
+  }
+  100% {
+    border-image: linear-gradient(360deg, #09cbca 50%, #ff3e81 50%) 1;
+  }
 }
 
 @keyframes borderGlow {
