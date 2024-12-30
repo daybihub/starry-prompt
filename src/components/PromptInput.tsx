@@ -15,7 +15,7 @@ export const PromptInput = ({ value, onChange, onSubmit, onEnhance }: PromptInpu
       <textarea
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full h-40 bg-black/90 backdrop-blur-sm rounded-xl p-4 pr-24 resize-none border-2 border-transparent focus:outline-none transition-all duration-300 scrollbar-custom focus:animate-[rotatingBorder_2s_linear_infinite]"
+        className="w-full h-40 bg-black/90 backdrop-blur-sm rounded-xl p-4 pr-24 resize-none border-2 border-transparent focus:outline-none transition-all duration-300 scrollbar-custom focus:animate-[rotatingBorder_4s_linear_infinite]"
         placeholder="Enter your prompt here..."
         style={{
           borderImage: 'linear-gradient(0deg, #09cbca 50%, #ff3e81 50%) 1',

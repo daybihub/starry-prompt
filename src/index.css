@@ -77,9 +77,23 @@
 @keyframes rotatingBorder {
   0% {
     border-image: linear-gradient(0deg, #09cbca 50%, #ff3e81 50%) 1;
+    box-shadow: 0 0 20px -5px #09cbca;
+  }
+  25% {
+    border-image: linear-gradient(90deg, #09cbca 50%, #ff3e81 50%) 1;
+    box-shadow: 0 0 30px -5px #ff3e81;
+  }
+  50% {
+    border-image: linear-gradient(180deg, #09cbca 50%, #ff3e81 50%) 1;
+    box-shadow: 0 0 20px -5px #09cbca;
+  }
+  75% {
+    border-image: linear-gradient(270deg, #09cbca 50%, #ff3e81 50%) 1;
+    box-shadow: 0 0 30px -5px #ff3e81;
   }
   100% {
     border-image: linear-gradient(360deg, #09cbca 50%, #ff3e81 50%) 1;
+    box-shadow: 0 0 20px -5px #09cbca;
   }
 }
 
