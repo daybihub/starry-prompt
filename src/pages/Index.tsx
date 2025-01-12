@@ -93,11 +93,11 @@ const Index = () => {
 
         <StockPrompts onSelect={setPrompt} />
 
-        {/* Apoyado Por Section */}
+        {/* Apoyado Por Section - Updated Layout */}
         <section className="mt-20">
-          <div className="flex flex-col items-center">
-            <h2 className="text-2xl font-semibold text-white mb-8">Apoyado por:</h2>
-            <div className="flex justify-center items-center gap-8 flex-wrap">
+          <div className="flex items-center justify-center gap-8">
+            <h2 className="text-2xl font-semibold text-white">Apoyado por:</h2>
+            <div className="flex items-center gap-8">
               {[1, 2, 3, 4].map((i) => (
                 <img
                   key={i}
@@ -110,7 +110,7 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Casos de Uso Section */}
+        {/* Casos de Uso Section - Enhanced Design */}
         <section className="mt-20">
           <h2 className="text-2xl font-semibold text-white text-center mb-12">Casos de Uso</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
