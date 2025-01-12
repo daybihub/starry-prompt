@@ -116,8 +116,10 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="glass-panel border-0">
               <CardHeader>
-                <Globe2 className="h-12 w-12 mb-4 text-green-500" />
-                <CardTitle>Páginas Web</CardTitle>
+                <div className="flex items-center gap-3">
+                  <Globe2 className="h-6 w-6 text-green-500" />
+                  <CardTitle className="text-xl">Páginas Web</CardTitle>
+                </div>
                 <CardDescription>
                   Crea páginas web impresionantes y responsivas con solo un prompt de texto. Nuestra IA entiende tu visión y la convierte en realidad.
                 </CardDescription>
@@ -126,8 +128,10 @@ const Index = () => {
 
             <Card className="glass-panel border-0">
               <CardHeader>
-                <Code2 className="h-12 w-12 mb-4 text-blue-500" />
-                <CardTitle>Aplicaciones Web</CardTitle>
+                <div className="flex items-center gap-3">
+                  <Code2 className="h-6 w-6 text-blue-500" />
+                  <CardTitle className="text-xl">Aplicaciones Web</CardTitle>
+                </div>
                 <CardDescription>
                   Construye aplicaciones web complejas potenciadas por IA. Desde e-commerce hasta dashboards, da vida a tus ideas instantáneamente.
                 </CardDescription>
@@ -136,8 +140,10 @@ const Index = () => {
 
             <Card className="glass-panel border-0">
               <CardHeader>
-                <Cloud className="h-12 w-12 mb-4 text-purple-500" />
-                <CardTitle>Soluciones de Hosting</CardTitle>
+                <div className="flex items-center gap-3">
+                  <Cloud className="h-6 w-6 text-purple-500" />
+                  <CardTitle className="text-xl">Soluciones de Hosting</CardTitle>
+                </div>
                 <CardDescription>
                   Despliega tus aplicaciones creadas con XTARIFY con nuestro servicio de hosting confiable. Escala sin esfuerzo según tus necesidades.
                 </CardDescription>
