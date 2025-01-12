@@ -4,7 +4,8 @@ import { PromptInput } from '@/components/PromptInput';
 import { StockPrompts } from '@/components/StockPrompts';
 import { useToast } from "@/components/ui/use-toast";
 import { Button } from "@/components/ui/button";
-import { Facebook, Linkedin } from 'lucide-react';
+import { Facebook, Linkedin, Globe2, Code2, Cloud } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const Index = () => {
   const [prompt, setPrompt] = useState('');
@@ -41,7 +42,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen p-4 md:p-8 relative overflow-hidden bg-black">
+    <div className="min-h-screen p-4 md:p-8 relative overflow-hidden bg-[#030711]">
       {/* Background squares */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
@@ -61,10 +62,7 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Purple gradient */}
-      <div className="absolute -top-[300px] -left-[300px] w-[1000px] h-[1000px] rounded-full bg-gradient-to-br from-purple-500/30 via-purple-500/20 to-transparent blur-3xl pointer-events-none" />
-
-      <div className="max-w-4xl mx-auto relative">
+      <div className="max-w-6xl mx-auto relative">
         <header className="flex justify-between items-center">
           <Logo />
           <Button variant="outline" className="rounded-full bg-white hover:bg-white/90 text-black border-0">
@@ -72,12 +70,17 @@ const Index = () => {
           </Button>
         </header>
 
-        <h1 className="text-[6rem] font-light text-center mt-12 mb-8">
-          <span className="font-mono text-white/60">Idea</span>{" "}
-          <span className="font-serif text-white/60">to</span>{" "}
-          <span className="font-sans text-white/60">Web</span>,{" "}
-          <span className="font-bold text-white">FAST...</span>
-        </h1>
+        <div className="mt-12 mb-4">
+          <h1 className="text-[6rem] font-light text-center">
+            <span className="font-mono text-white/60">Idea</span>{" "}
+            <span className="font-serif text-white/60">to</span>{" "}
+            <span className="font-sans text-white/60">Web</span>,{" "}
+            <span className="font-bold text-white">FAST...</span>
+          </h1>
+          <p className="text-gray-400 text-xl text-center mb-8">
+            Create beautiful, modern web applications at the speed of thought.
+          </p>
+        </div>
 
         <main className="backdrop-blur-sm bg-white/5 rounded-xl p-6 border border-white/10">
           <PromptInput
@@ -88,8 +91,59 @@ const Index = () => {
           />
         </main>
 
-        {/* Stock Prompts outside the main container */}
         <StockPrompts onSelect={setPrompt} />
+
+        {/* Trusted By Section */}
+        <section className="mt-20 text-center">
+          <h2 className="text-2xl font-semibold text-white mb-8">Trusted By</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="glass-panel rounded-xl p-6 flex items-center justify-center">
+                <img
+                  src="https://www.co.dev/images/y_combinator_logo.png"
+                  alt={`Partner ${i}`}
+                  className="h-12 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Cases of Use Section */}
+        <section className="mt-20">
+          <h2 className="text-2xl font-semibold text-white text-center mb-12">Cases of Use</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="glass-panel border-0">
+              <CardHeader>
+                <Globe2 className="h-12 w-12 mb-4 text-green-500" />
+                <CardTitle>Web Pages</CardTitle>
+                <CardDescription>
+                  Create stunning, responsive web pages with just a text prompt. Our AI understands your vision and turns it into reality.
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="glass-panel border-0">
+              <CardHeader>
+                <Code2 className="h-12 w-12 mb-4 text-blue-500" />
+                <CardTitle>Web Applications</CardTitle>
+                <CardDescription>
+                  Build complex web applications powered by AI. From e-commerce to dashboards, bring your ideas to life instantly.
+                </CardDescription>
+              </CardHeader>
+            </Card>
+
+            <Card className="glass-panel border-0">
+              <CardHeader>
+                <Cloud className="h-12 w-12 mb-4 text-purple-500" />
+                <CardTitle>Hosting Solutions</CardTitle>
+                <CardDescription>
+                  Deploy your XTARIFY-created applications with our reliable hosting service. Scale effortlessly as your needs grow.
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+        </section>
 
         {/* Social Media Buttons */}
         <div className="fixed bottom-8 right-8 flex flex-col gap-4">
