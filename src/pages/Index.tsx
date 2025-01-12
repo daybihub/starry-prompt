@@ -15,14 +15,14 @@ const Index = () => {
     if (!prompt.trim()) {
       toast({
         title: "Error",
-        description: "Please enter a prompt first",
+        description: "Por favor ingresa un prompt primero",
         variant: "destructive",
       });
       return;
     }
     toast({
-      title: "Success",
-      description: "Prompt submitted successfully!",
+      title: "¡Éxito!",
+      description: "¡Prompt enviado exitosamente!",
     });
   };
 
@@ -30,14 +30,14 @@ const Index = () => {
     if (!prompt.trim()) {
       toast({
         title: "Error",
-        description: "Please enter a prompt to enhance",
+        description: "Por favor ingresa un prompt para mejorar",
         variant: "destructive",
       });
       return;
     }
     toast({
-      title: "Enhancing",
-      description: "Making your prompt even better...",
+      title: "Mejorando",
+      description: "Haciendo tu prompt aún mejor...",
     });
   };
 
@@ -66,19 +66,19 @@ const Index = () => {
         <header className="flex justify-between items-center">
           <Logo />
           <Button variant="outline" className="rounded-full bg-white hover:bg-white/90 text-black border-0">
-            Login
+            Iniciar Sesión
           </Button>
         </header>
 
         <div className="mt-12 mb-4">
           <h1 className="text-[6rem] font-light text-center">
             <span className="font-mono text-white/60">Idea</span>{" "}
-            <span className="font-serif text-white/60">to</span>{" "}
+            <span className="font-serif text-white/60">a</span>{" "}
             <span className="font-sans text-white/60">Web</span>,{" "}
-            <span className="font-bold text-white">FAST...</span>
+            <span className="font-bold text-white">RÁPIDO...</span>
           </h1>
           <p className="text-gray-400 text-xl text-center mb-8">
-            Create beautiful, modern web applications at the speed of thought.
+            Crea aplicaciones web hermosas y modernas a la velocidad del pensamiento.
           </p>
         </div>
 
@@ -93,32 +93,33 @@ const Index = () => {
 
         <StockPrompts onSelect={setPrompt} />
 
-        {/* Trusted By Section */}
-        <section className="mt-20 text-center">
-          <h2 className="text-2xl font-semibold text-white mb-8">Trusted By</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="glass-panel rounded-xl p-6 flex items-center justify-center">
+        {/* Apoyado Por Section */}
+        <section className="mt-20">
+          <div className="flex flex-col items-center">
+            <h2 className="text-2xl font-semibold text-white mb-8">Apoyado por:</h2>
+            <div className="flex justify-center items-center gap-8 flex-wrap">
+              {[1, 2, 3, 4].map((i) => (
                 <img
+                  key={i}
                   src="https://www.co.dev/images/y_combinator_logo.png"
                   alt={`Partner ${i}`}
-                  className="h-12 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                  className="h-8 object-contain opacity-70 hover:opacity-100 transition-opacity"
                 />
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </section>
 
-        {/* Cases of Use Section */}
+        {/* Casos de Uso Section */}
         <section className="mt-20">
-          <h2 className="text-2xl font-semibold text-white text-center mb-12">Cases of Use</h2>
+          <h2 className="text-2xl font-semibold text-white text-center mb-12">Casos de Uso</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="glass-panel border-0">
               <CardHeader>
                 <Globe2 className="h-12 w-12 mb-4 text-green-500" />
-                <CardTitle>Web Pages</CardTitle>
+                <CardTitle>Páginas Web</CardTitle>
                 <CardDescription>
-                  Create stunning, responsive web pages with just a text prompt. Our AI understands your vision and turns it into reality.
+                  Crea páginas web impresionantes y responsivas con solo un prompt de texto. Nuestra IA entiende tu visión y la convierte en realidad.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -126,9 +127,9 @@ const Index = () => {
             <Card className="glass-panel border-0">
               <CardHeader>
                 <Code2 className="h-12 w-12 mb-4 text-blue-500" />
-                <CardTitle>Web Applications</CardTitle>
+                <CardTitle>Aplicaciones Web</CardTitle>
                 <CardDescription>
-                  Build complex web applications powered by AI. From e-commerce to dashboards, bring your ideas to life instantly.
+                  Construye aplicaciones web complejas potenciadas por IA. Desde e-commerce hasta dashboards, da vida a tus ideas instantáneamente.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -136,9 +137,9 @@ const Index = () => {
             <Card className="glass-panel border-0">
               <CardHeader>
                 <Cloud className="h-12 w-12 mb-4 text-purple-500" />
-                <CardTitle>Hosting Solutions</CardTitle>
+                <CardTitle>Soluciones de Hosting</CardTitle>
                 <CardDescription>
-                  Deploy your XTARIFY-created applications with our reliable hosting service. Scale effortlessly as your needs grow.
+                  Despliega tus aplicaciones creadas con XTARIFY con nuestro servicio de hosting confiable. Escala sin esfuerzo según tus necesidades.
                 </CardDescription>
               </CardHeader>
             </Card>
