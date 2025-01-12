@@ -103,7 +103,7 @@ const Index = () => {
                   key={i}
                   src="https://www.co.dev/images/y_combinator_logo.png"
                   alt={`Partner ${i}`}
-                  className="h-8 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                  className="h-8 object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                 />
               ))}
             </div>
@@ -114,7 +114,7 @@ const Index = () => {
         <section className="mt-20">
           <h2 className="text-2xl font-semibold text-white text-center mb-12">Casos de Uso</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="glass-panel border-0">
+            <Card className="glass-panel border-0 rounded-2xl overflow-hidden">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Globe2 className="h-6 w-6 text-green-500" />
@@ -126,7 +126,7 @@ const Index = () => {
               </CardHeader>
             </Card>
 
-            <Card className="glass-panel border-0">
+            <Card className="glass-panel border-0 rounded-2xl overflow-hidden">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Code2 className="h-6 w-6 text-blue-500" />
@@ -138,7 +138,7 @@ const Index = () => {
               </CardHeader>
             </Card>
 
-            <Card className="glass-panel border-0">
+            <Card className="glass-panel border-0 rounded-2xl overflow-hidden">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <Cloud className="h-6 w-6 text-purple-500" />
